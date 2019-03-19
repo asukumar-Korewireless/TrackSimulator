@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrackSimulator.iml" filepath="$PROJECT_DIR$/.idea/modules/TrackSimulator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tracksimulator-build.iml" filepath="$PROJECT_DIR$/.idea/modules/tracksimulator-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrackSimulator-build.iml" filepath="$PROJECT_DIR$/.idea/modules/TrackSimulator-build.iml" />
     </modules>
   </component>
 </project>

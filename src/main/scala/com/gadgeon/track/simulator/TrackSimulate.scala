@@ -53,13 +53,14 @@ object TrackSimulate {
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 
-    val conf = new SparkConf()
-      .setAppName("TrackSimulator")
+    //val conf = new SparkConf()
+    //  .setAppName("TrackSimulator")
+    //val sc = new SparkContext(conf)
 
-    //val sc = new SparkContext("local[*]", "TrackSimulator")
-    val sc = new SparkContext(conf)
-    //val lines = sc.textFile("./data/tracking_data_all_ordred-imei.csv")
-    val lines = sc.textFile("./tracking_data_all_ordred-imei.csv")
+    val sc = new SparkContext("local[2]", "TrackSimulator")
+
+    val lines = sc.textFile("./data/tracking_data_all_ordred-imei.csv")
+    //val lines = sc.textFile("./tracking_data_all_ordred-imei.csv")
     val header = lines.first()
     val data = lines.filter(row => row != header)
     val parsedLines = data.map(parseLine)
